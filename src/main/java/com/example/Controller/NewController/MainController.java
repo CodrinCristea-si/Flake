@@ -534,8 +534,7 @@ public class MainController implements Observable {
     }
 
     public void UpdateStatusRequest(String status,String receiver,String sender){
-        System.out.println(receiver);
-        System.out.println(sender);
+
         Relationship rel=getRequestByUsername(receiver,sender);
         if(status.equals("accept")){
             Relationship rel1=new Relationship(rel.getFirstUserName(),rel.getSecondUserName(),rel.getDtf());
@@ -655,9 +654,9 @@ public class MainController implements Observable {
 
     public User tryLogin(String username, String password) throws NoSuchAlgorithmException {
         String hash_pass=Algoritm.hashPassword(password);
-        System.out.println(hash_pass);
+
         return contU.getUserLogin(username,hash_pass);
-        //return hash_pass;
+
     }
 
     public boolean addEvent(Event event){
@@ -705,24 +704,21 @@ public class MainController implements Observable {
     }
 
     public boolean addUE(UserEvent userEvent){
-        System.out.println(getIdUserFromParticipationList(userEvent.getId_user()));
-        System.out.println(getIdEventFromParticipationList(userEvent.getId_event()));
+
        if(getIdUserFromParticipationList(userEvent.getId_user()) && getIdEventFromParticipationList(userEvent.getId_event()))
                    throw new Exception("This user is already on the list");
         contUE.add(userEvent);
+        notifyObservers();
         return true;
     }
 
-    // getUserByParticipation
-    //getEventByParticipation
-    //removeFromParticipationByUser
-    //RemoveFromParticipationByEvent
 
     public boolean removeUserEventIdUser(Long id) {
 
         UserEvent Uevent=contUE.getById(id);
         if(Uevent==null) throw new Exception("There isnt a participation with that id");
         contUE.removeById(id);
+        notifyObservers();
         return true;
     }
 
@@ -739,7 +735,7 @@ public class MainController implements Observable {
                 listU.add(getUserByUsername(el.getFirstUserName()));
             else listU.add(getUserByUsername(el.getSecondUserName()));
         }
-        //System.out.println(listU);
+
         return listU;
     }
 
@@ -747,7 +743,7 @@ public class MainController implements Observable {
         Page<Relationship> pageR;
         if(first)pageR=contRQ.getFirstPageRequests(username,type);
         else pageR=contRQ.getPageRequests(username,type);
-        //System.out.println(pageR.getCurrentPage().getPageNumber());
+
         List<Relationship> listR=pageR.getPageContent().collect(Collectors.toList());
         List<User> listU=new ArrayList<>();
         for(var el:listR){
@@ -759,11 +755,24 @@ public class MainController implements Observable {
 
     }
 
-    public List<Event> getPageEvents(PageType type){
+    public List<Event>  getPageEventS(PageType type,boolean first,User user){
+        Page<Event> pageR;
+        if(first)
+            pageR=contE.getFirstPageEventsSUBB(type,user.getId());
+        else pageR=contE.getPageEventsSUBB(type, user.getId());
+        List<Event> listR=pageR.getPageContent().collect(Collectors.toList());
 
+        return listR;
 
-        List<Event> listU=new ArrayList<>();
-        return getAllEvents();
+    }
+
+    public List<Event> getPageEvent(PageType type,boolean first){
+        Page<Event> pageR;
+        if(first)
+            pageR=contE.getFirstPageEvents(type);
+        else pageR=contE.getPageEvents(type);
+        List<Event> listR=pageR.getPageContent().collect(Collectors.toList());
+        return listR;
 
     }
 
@@ -776,6 +785,7 @@ public class MainController implements Observable {
         return false;
     }
 
+
     public Message getMessageById(Long id){
         if(id==null)throw new MessageException("The id message is empty!");
         Message mess=contM.getById(id);
@@ -785,6 +795,24 @@ public class MainController implements Observable {
         }
         return mess;
     }
+
+
+
+    public Event getEventByName(String name){
+        for(Event ev: getAllEvents())
+            if(ev.getName().equals(name))
+                return ev;
+        return null;
+    }
+
+    public Long getUserEventByIds(Long id_user,Long id_event){
+
+        for(UserEvent userEvent:getAllUserEvent())
+            if(userEvent.getId_user().equals(id_user)&& userEvent.getId_event().equals(id_event))
+                return userEvent.getId_ue();
+        return null;
+    }
+
 
     public List<Event> getUserEventsById(Long id){
         return contE.getUserEvents(id);
@@ -837,5 +865,9 @@ public class MainController implements Observable {
                 convoSF.add(mess);
         }
         return convoSF;
+    }
+
+    public int getSize() {
+        return contE.getSize();
     }
 }

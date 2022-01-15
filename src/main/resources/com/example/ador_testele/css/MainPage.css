@@ -1,0 +1,9 @@
+.split-pane{
+    --fx-background-color: linear-gradient(to bottom,#b3e0ff,#b3e0ff);
+    -fx-border-color: rgb(25,26,158);
+}
+
+.split-pane-top{
+    -fx-background-color: linear-gradient(to bottom,#b3e0ff,#b3e0ff);
+    -fx-border-color: rgb(25,26,158);
+}

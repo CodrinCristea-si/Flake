@@ -16,12 +16,13 @@ public class FirstPageController {
 
     public void setCont(MainController cont) {
         this.cont = cont;
-        SetButtonsImage(HomeButton,"C:\\Users\\Alexandra\\Desktop\\LastTry\\src\\main\\resources\\com\\example\\ador_testele\\Photos\\HomeIcon.png");
+        /*SetButtonsImage(HomeButton,"C:\\Users\\Alexandra\\Desktop\\LastTry\\src\\main\\resources\\com\\example\\ador_testele\\Photos\\HomeIcon.png");
         SetButtonsImage(MessagesButton,"C:\\Users\\Alexandra\\Desktop\\LastTry\\src\\main\\resources\\com\\example\\ador_testele\\Photos\\MessagesIcon2.png");
         SetButtonsImage(PeopleButton,"C:\\Users\\Alexandra\\Desktop\\LastTry\\src\\main\\resources\\com\\example\\ador_testele\\Photos\\People2.png");
         SetButtonsImage(EventsButton,"C:\\Users\\Alexandra\\Desktop\\LastTry\\src\\main\\resources\\com\\example\\ador_testele\\Photos\\EventIcon.png");
         SetButtonsImage(StatisticsButton,"C:\\Users\\Alexandra\\Desktop\\LastTry\\src\\main\\resources\\com\\example\\ador_testele\\Photos\\StatisticsIcon.png");
         SetButtonsImage(ExitButton,"C:\\Users\\Alexandra\\Desktop\\LastTry\\src\\main\\resources\\com\\example\\ador_testele\\Photos\\ExitIcon.png");
+   */
     }
 
     private void SetButtonsImage(Button NameButton,String url){

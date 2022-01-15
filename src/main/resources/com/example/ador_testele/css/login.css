@@ -17,7 +17,7 @@
 }
 
 .split-pane:horizontal > .split-pane-divider {
-    -fx-background-color: linear-gradient(to bottom,#8447F5,#581FC0);
+    -fx-background-color: linear-gradient(to bottom,#8c1aff, #8c1aff);
 }
 
 .text-field {

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorReg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.RegisterController">
+<AnchorPane fx:id="anchorReg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="434.0" style="-fx-background-color: #8080ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.RegisterController">
    <children>
       <GridPane layoutX="27.0" layoutY="71.0" prefHeight="174.0" prefWidth="372.0">
         <columnConstraints>
@@ -41,9 +41,9 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="textFirstName" GridPane.columnIndex="1" />
-            <TextField fx:id="textLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="textUsername" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="textFirstName" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" />
+            <TextField fx:id="textLastName" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textUsername" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Password:" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
@@ -54,8 +54,8 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <PasswordField fx:id="textPassword" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <PasswordField fx:id="textRetypePassword" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <PasswordField fx:id="textPassword" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="textRetypePassword" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <HBox layoutX="6.0" layoutY="273.0" prefHeight="100.0" prefWidth="414.0">
@@ -63,14 +63,14 @@
             <AnchorPane prefHeight="100.0" prefWidth="432.0">
                <children>
 
-                  <Button layoutX="264.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="55.0" prefWidth="140.0" text="Register">
+                  <Button layoutX="264.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #b380ff;" text="Register">
 
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Button>
 
-                  <Button layoutX="11.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="55.0" prefWidth="140.0" text="Cancel">
+                  <Button layoutX="11.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #b380ff;" text="Cancel">
 
                      <font>
                         <Font size="24.0" />

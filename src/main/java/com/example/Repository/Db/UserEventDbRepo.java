@@ -99,7 +99,7 @@ public class UserEventDbRepo extends DbRepoId<Long, UserEvent> implements Reposi
             Long id_u= ps.getLong("id_u");
             Long id_e = ps.getLong("id_e");
 
-            Uevent =new UserEvent(id_u,id_e);
+            Uevent =new UserEvent(id,id_u,id_e);
 
         }
         return Uevent;
@@ -140,7 +140,7 @@ public class UserEventDbRepo extends DbRepoId<Long, UserEvent> implements Reposi
             Long id_e = ps.getLong("id_e");
 
 
-            UserEvent Uevent =new UserEvent(id_u,id_e);
+            UserEvent Uevent =new UserEvent(id,id_u,id_e);
 
             Uevents.add(Uevent);
         }

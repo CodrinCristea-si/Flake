@@ -284,83 +284,9 @@ public class FriendsTableController implements Observer {
     public void handleDeleteFriend(ActionEvent actionEvent) {
     }
 
-    /*
-    @FXML
-    private TableView<PrintedPersones> tableView;
-    @FXML
-    private TableColumn<PrintedPersones, String> tableColumnName;
-    @FXML
-    private TableColumn<PrintedPersones, String> tableColumnLastName;
-    @FXML
-    private TextField username;
-
-
-
-    @FXML
-    private TextField SearchFriend;
-
-    @FXML
-    private Button deleteButton;
-
-    @FXML
-    public void initialize() {
-        tableColumnName.setCellValueFactory(new PropertyValueFactory<PrintedPersones, String>("First_Name"));
-        tableColumnLastName.setCellValueFactory(new PropertyValueFactory<PrintedPersones, String>("Last_Name"));
-        tableView.setItems(model);
-
-    }
-
-    public void initModel() {
-
-        Set<Persone> persones = cont.getFriendsByUsername(user.getUsername()).keySet();
-
-        model.setAll(persones.stream()
-                .map(x -> new PrintedPersones(x.getFirstName(), x.getLastName()))
-                .collect(Collectors.toList()));
-
-    }
-
-    public void handleDeleteFriend(ActionEvent ev) {
-        String LastName=tableView.getSelectionModel().getSelectedItem().getLast_Name();
-        String userName= user.getUsername();
-        String userName2= cont.getUsernameByFirstName(LastName);
-
-        if(cont.GetTheSender(userName)) {
-            cont.removeRelationshipByUsernames(userName, userName2);
-            cont.removeRequestBySenderAndReceiver(userName, userName2);
-            //notify();
-        }
-        else
-        {
-            cont.removeRelationshipByUsernames(userName2, userName);
-            cont.removeRequestBySenderAndReceiver(userName2, userName);
-           // notify();
-        }
+    public void SearchRequests(ActionEvent actionEvent) {
 
     }
 
 
-    public void handleSearch(ActionEvent actionEvent) {
-
-
-        String searchFriendUser= SearchFriend.getText();
-        List<Persone> list=new ArrayList<>();
-        for(Persone p: cont.getFriendsByUsername(user.getUsername()).keySet())
-            if(p.getFirstName().equals(searchFriendUser)
-            || p.getLastName().equals(searchFriendUser))
-                list.add(p);
-
-        model.removeAll();
-        model.setAll(list.stream()
-                .map(x -> new PrintedPersones(x.getFirstName(), x.getLastName()))
-                .collect(Collectors.toList()));
-        initModel();
-
-    }
-
-    @Override
-    public void update() {
-        initModel();
-    }
-    */
 }

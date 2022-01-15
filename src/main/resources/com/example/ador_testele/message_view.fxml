@@ -12,35 +12,49 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="600.0" stylesheets="css/message.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.MessageGUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.MessageGUIController">
+
    <children>
       <SplitPane dividerPositions="0.34124331550802134" layoutY="-3.0" prefHeight="331.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="308.0" prefWidth="192.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="308.0" prefWidth="201.0" style="-fx-background-color: #8080ff;">
                <children>
-                  <TextField fx:id="textFilterUser" layoutX="44.0" layoutY="25.0" prefHeight="26.0" prefWidth="151.0" />
-                  <TableView fx:id="tableUsername" layoutX="1.0" layoutY="62.0" onMouseClicked="#handleChoose" prefHeight="200.0" prefWidth="200.0">
+                  <TextField fx:id="textFilterUser" layoutX="44.0" layoutY="25.0" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #e6e6ff;" />
+                  <TableView fx:id="tableUsername" layoutX="1.0" layoutY="62.0" onMouseClicked="#handleChoose" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ccccff;">
                     <columns>
                       <TableColumn fx:id="columnUsername" prefWidth="199.19999384880066" text="Friends Username" />
                     </columns>
                   </TableView>
-                  <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="5.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="18.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                        <image>
-                           <Image url="@images/search-icon.png" />
+                           <Image url="@Photos/SearchIcon.png" />
                        </image>
                   </ImageView>
-                  <Button layoutX="75.0" layoutY="276.0" mnemonicParsing="false" text="Send all" onAction="#handleSendAll"/>
+
+                  <Button layoutX="76.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleSendAll" prefHeight="38.0" prefWidth="75.0" style="-fx-background-color: #b380ff;" text="Send all">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="241.0" prefWidth="270.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="319.0" prefWidth="390.0" style="-fx-background-color: #8080ff;">
                <children>
-                  <Button defaultButton="true" layoutX="292.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleSend" prefHeight="38.0" prefWidth="74.0" text="Send" />
-                  <TextArea fx:id="textMess" layoutY="276.0" prefHeight="47.0" prefWidth="292.0" wrapText="true" />
-                  <ScrollPane prefHeight="262.0" prefWidth="383.0">
+
+                  <Button defaultButton="true" layoutX="292.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleSend" prefHeight="38.0" prefWidth="89.0" style="-fx-background-color: #b380ff;" text="Send">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <TextArea fx:id="textMess" layoutY="271.0" prefHeight="38.0" prefWidth="292.0" style="-fx-background-color: #e6e6ff;" wrapText="true" />
+                  <ScrollPane layoutY="14.0" prefHeight="248.0" prefWidth="383.0" style="-fx-background-color: #b380ff;">
+
+
+
                      <content>
-                        <VBox fx:id="mainSceneTExt" prefHeight="264.0" prefWidth="382.0" />
+                        <VBox fx:id="mainSceneTExt" prefHeight="253.0" prefWidth="379.0" style="-fx-background-color: #e6e6ff;" />
                      </content>
                   </ScrollPane>
                   <Label fx:id="labelReply" layoutX="6.0" layoutY="262.0" text="reply:" visible="false" />

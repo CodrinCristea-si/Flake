@@ -58,7 +58,7 @@ public abstract class DbRepoId<Id,E extends Entity<Id>>implements Repository<Id,
      */
     @Override
     public boolean save(E entity) {
-        //System.out.println(entity.toString());
+
         try {
              if(connection.isClosed()) openConnection();
              PreparedStatement ps = connection.prepareStatement(sql);
@@ -183,13 +183,13 @@ public abstract class DbRepoId<Id,E extends Entity<Id>>implements Repository<Id,
         try{
              if(connection.isClosed()) openConnection();
              PreparedStatement ps = connection.prepareStatement(sql);
-            System.out.println(ps);
+
              ResultSet resultSet = ps.executeQuery();
              list=getAllStatement(resultSet);
              sql=null;
              return list;
         } catch (SQLException e) {
-            e.printStackTrace();
+
             throw new EntityRepoException(e.getMessage());
 
         }
@@ -201,14 +201,14 @@ public abstract class DbRepoId<Id,E extends Entity<Id>>implements Repository<Id,
             if(connection.isClosed()) openConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             setGetAllPageStatement(ps, pageble);
-            System.out.println(ps);
+
             ResultSet resultSet = ps.executeQuery();
             list=getAllStatement(resultSet);
-            System.out.println(list);
+
             sql=null;
             return new Page<E>(pageble,list.stream());
         } catch (SQLException e) {
-            e.printStackTrace();
+
             throw new EntityRepoException(e.getMessage());
         }
     }
@@ -287,7 +287,7 @@ public abstract class DbRepoId<Id,E extends Entity<Id>>implements Repository<Id,
             if(connection.isClosed()) openConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             setGetOtherStatement(ps,other);
-            System.out.println(ps);
+
             ResultSet resultSet = ps.executeQuery();
             sql=null;
             return getGetOtherStatement(resultSet);
@@ -396,9 +396,9 @@ public abstract class DbRepoId<Id,E extends Entity<Id>>implements Repository<Id,
     {
         try { connection.close(); }
         catch (SQLException e) {
-            //e.printStackTrace();
+
         }
-        //System.out.println("deleted");
+
         super.finalize();
     }
 }

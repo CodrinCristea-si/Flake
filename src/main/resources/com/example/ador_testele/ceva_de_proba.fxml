@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.TableEvents">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #8080ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.TableEvents">
    <children>
-      <VBox fx:id="vertical_box" layoutX="-1.0" prefHeight="264.0" prefWidth="607.0">
+      <VBox fx:id="vertical_box" layoutX="-1.0" prefHeight="320.0" prefWidth="600.0">
          <children>
-            <HBox fx:id="hboxf1" prefHeight="78.0" prefWidth="532.0">
+            <HBox fx:id="hboxf1" prefHeight="86.0" prefWidth="598.0" style="-fx-background-color: #8080ff;">
                <children>
-                  <AnchorPane prefHeight="78.0" prefWidth="463.0">
+                  <AnchorPane prefHeight="86.0" prefWidth="479.0" style="-fx-background-color: #ccccff;">
                      <children>
                         <ImageView fx:id="ImageEvent1" fitHeight="78.0" fitWidth="72.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/flake-logo.png" />
                            </image>
                         </ImageView>
-                        <TextField fx:id="NameEvent1" layoutX="109.0" layoutY="6.0" prefHeight="25.0" prefWidth="101.0" />
-                        <TextField fx:id="Date_event1" layoutX="109.0" layoutY="39.0" prefHeight="25.0" prefWidth="101.0" />
-                        <TextArea fx:id="DecriptionEvent1" layoutX="225.0" layoutY="6.0" prefHeight="57.0" prefWidth="114.0" />
-                        <Button fx:id="Participate1" layoutX="385.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Button" />
-                        <Button fx:id="Notify1" layoutX="385.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Button" />
+                        <TextField fx:id="NameEvent1" layoutX="109.0" layoutY="6.0" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #e6e6ff;" />
+                        <TextField fx:id="Date_event1" layoutX="109.0" layoutY="39.0" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #e6e6ff;" />
+                        <TextArea fx:id="DecriptionEvent1" layoutX="225.0" layoutY="6.0" prefHeight="57.0" prefWidth="114.0" style="-fx-background-color: #e6e6ff;" />
+                        <Button fx:id="Participate1" layoutX="371.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleButtonEvent1" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #b3b3ff;" text="Button" />
+                        <Button fx:id="Notify1" layoutX="371.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #b3b3ff;" text="Button" />
                      </children>
                   </AnchorPane>
                </children>
             </HBox>
             <HBox fx:id="hboxf2" prefHeight="78.0" prefWidth="531.0">
                <children>
-                  <AnchorPane prefHeight="78.0" prefWidth="479.0">
+                  <AnchorPane prefHeight="78.0" prefWidth="479.0" style="-fx-background-color: #ccccff;">
                      <children>
                         <ImageView fx:id="ImageEvent2" fitHeight="78.0" fitWidth="72.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/flake-logo.png" />
                            </image>
                         </ImageView>
-                        <TextField fx:id="NameEvent2" layoutX="107.0" layoutY="6.0" prefHeight="25.0" prefWidth="101.0" />
-                        <TextField fx:id="Date_event2" layoutX="107.0" layoutY="39.0" prefHeight="25.0" prefWidth="101.0" />
-                        <TextArea fx:id="DecriptionEvent2" layoutX="223.0" layoutY="10.0" prefHeight="57.0" prefWidth="114.0" />
-                        <Button fx:id="Participate2" layoutX="386.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Button" />
-                        <Button fx:id="Notify2" layoutX="386.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Button" />
+                        <TextField fx:id="NameEvent2" layoutX="107.0" layoutY="6.0" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #e6e6ff;" />
+                        <TextField fx:id="Date_event2" layoutX="107.0" layoutY="39.0" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #e6e6ff;" />
+                        <TextArea fx:id="DecriptionEvent2" layoutX="223.0" layoutY="2.0" prefHeight="65.0" prefWidth="114.0" style="-fx-background-color: #e6e6ff;" />
+                        <Button fx:id="Participate2" layoutX="371.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleButtonEvent2" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #b3b3ff;" text="Button" />
+                        <Button fx:id="Notify2" layoutX="371.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #b3b3ff;" text="Button" />
                      </children>
                   </AnchorPane>
                </children>
             </HBox>
-            <HBox fx:id="hboxf3" prefHeight="78.0" prefWidth="479.0">
+            <HBox fx:id="hboxf3" prefHeight="78.0" prefWidth="490.0">
                <children>
-                  <AnchorPane prefHeight="78.0" prefWidth="479.0">
+                  <AnchorPane prefHeight="78.0" prefWidth="479.0" style="-fx-background-color: #ccccff;">
                      <children>
-                        <TextField fx:id="NameEvent3" layoutX="103.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" />
-                        <TextField fx:id="Date_event3" layoutX="103.0" layoutY="45.0" prefHeight="19.0" prefWidth="101.0" />
+                        <TextField fx:id="NameEvent3" layoutX="103.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #e6e6ff;" />
+                        <TextField fx:id="Date_event3" layoutX="103.0" layoutY="45.0" prefHeight="19.0" prefWidth="101.0" style="-fx-background-color: #e6e6ff;" />
                         <ImageView fx:id="ImageEvent3" fitHeight="65.0" fitWidth="72.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/flake-logo.png" />
                            </image>
                         </ImageView>
-                        <TextArea fx:id="DecriptionEvent3" layoutX="226.0" layoutY="6.0" prefHeight="65.0" prefWidth="114.0" />
-                        <Button fx:id="Participate3" layoutX="375.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Button" />
-                        <Button fx:id="Notify3" layoutX="375.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Button" />
+                        <TextArea fx:id="DecriptionEvent3" layoutX="226.0" layoutY="14.0" prefHeight="57.0" prefWidth="114.0" style="-fx-background-color: #e6e6ff;" />
+                        <Button fx:id="Participate3" layoutX="368.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonEvent3" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #b3b3ff;" text="Button" />
+                        <Button fx:id="Notify3" layoutX="368.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #b3b3ff;" text="Button" />
                      </children>
                   </AnchorPane>
                </children>
             </HBox>
          </children></VBox>
-      <Button layoutX="8.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" text="&lt;&lt;" />
-      <Button layoutX="548.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" text="&gt;&gt;" />
-      <Button layoutX="303.0" layoutY="252.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Create Event" />
+      <Button layoutX="8.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleEventPreviousPage" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #00e673;" text="&lt;&lt;" />
+      <Button layoutX="548.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleEventNextPage" prefHeight="25.0" prefWidth="38.0" style="-fx-background-color: #00e673;" text="&gt;&gt;" />
+      <Button layoutX="348.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleCreateEvent" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #b380ff;" text="Create Event" />
+      <Button layoutX="93.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleAllEvents" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #b380ff;" text="All Events" />
+      <Button layoutX="213.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleEventsParticipation" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #b380ff;" text="My Events" />
 
 
    </children>

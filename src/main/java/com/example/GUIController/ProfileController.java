@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 
 public class ProfileController implements Observer {
     private MainController cont;
-    private User user;//cel care are trimite cere
+    private User user;
     private User other;
 
     @FXML

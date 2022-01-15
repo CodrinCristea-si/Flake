@@ -423,6 +423,7 @@ public class MainMenu {
         Event ev,ev1,ev2;
         ev=new Event(4L,"untold","musical",LocalDate.now());
         ev1=new Event(2L,"aaa","musical",LocalDate.now());
+        //ev5=new Event("aaa","musical",LocalDate.now());
         ev2=new Event(3L,"bbb","musical",LocalDate.now());
         System.out.println("ajunge aici");
         try {
@@ -450,8 +451,8 @@ public class MainMenu {
             //System.out.println(u.getId_event());
         }
 
-        UserEvent userEvent=new UserEvent(5908993355151158916L,1L);
-        cont.addUE(userEvent);
+      //  UserEvent userEvent=new UserEvent(5908993355151158916L,1L);
+       // cont.addUE(userEvent);
        /* List<UserEvent> list1=cont.getAllUserEvent();
         for(UserEvent u: list1)
         {
@@ -467,12 +468,13 @@ public class MainMenu {
             System.out.println(as.getDescription());
         }
 */
-       // cont.removeUserEventIdUser(1L);
+       // cont.removeUserEventIdUser(3L);
         List<UserEvent> list1=cont.getAllUserEvent();
+        //System.out.println(list1);
         for(UserEvent u: list1)
         {
-            System.out.println(cont.getUserById(u.getId_user()).getPers().getLastName());
-            //System.out.println(u.getId_event());
+           // System.out.println(cont.getUserById(u.getId_user()).getPers().getLastName());
+            System.out.println(u.getId_ue());
         }
 
 

@@ -57,7 +57,7 @@
                         <Image url="@images/Flake.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="5.0" layoutY="324.0" prefHeight="70.0" prefWidth="146.0" text="developed by Cirstean Alexandra and Cristea Codrin" wrapText="true" />
+                  <Label layoutX="5.0" layoutY="324.0" prefHeight="70.0" prefWidth="146.0" wrapText="true" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="loginAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="434.0" styleClass="split-pane-right" stylesheets="@../ador_testele/css/login.css">
@@ -69,20 +69,20 @@
                   </Label>
                   <VBox layoutY="192.0" prefHeight="398.0" prefWidth="434.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="434.0">
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="434.0" style="-fx-background-color: #8080ff;">
                            <children>
                               <VBox layoutX="53.0" layoutY="200.0" prefHeight="175.0" prefWidth="327.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="200.0">
                                  <children>
-                                    <AnchorPane prefHeight="198.0" prefWidth="330.0">
+                                    <AnchorPane prefHeight="198.0" prefWidth="330.0" style="-fx-background-color: #8080ff;">
                                        <children>
-                                          <Button layoutX="147.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="51.0" prefWidth="164.0" styleClass="button-login" text="Login">
+                                          <Button layoutX="147.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="51.0" prefWidth="164.0" style="-fx-background-color: #b380ff;" styleClass="button-login" text="Login">
                                              <font>
-                                                <Font size="19.0" />
+                                                <Font size="23.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="147.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleRegisterAction" prefHeight="51.0" prefWidth="164.0" styleClass="button-reg" text="Register">
+                                          <Button layoutX="147.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleRegisterAction" prefHeight="51.0" prefWidth="164.0" style="-fx-background-color: #b380ff;" styleClass="button-reg" text="Register">
                                              <font>
-                                                <Font size="19.0" />
+                                                <Font size="22.0" />
                                              </font>
                                           </Button>
                                        </children>
@@ -99,11 +99,9 @@
                                     <RowConstraints maxHeight="59.599981689453124" minHeight="10.0" prefHeight="51.79998779296874" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
+                                     <TextField fx:id="textUsername" prefWidth="230.0" GridPane.columnIndex="1" />
 
-                                    <TextField fx:id="textUsername" prefWidth="230.0" text="babushka20" GridPane.columnIndex="1" />
-
-
-                                    <Label prefHeight="35.0" prefWidth="132.0" text="Username :">
+                                     <Label prefHeight="35.0" prefWidth="132.0" text="Username :">
                                        <font>
                                           <Font size="24.0" />
                                        </font>

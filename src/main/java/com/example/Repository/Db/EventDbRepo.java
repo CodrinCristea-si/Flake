@@ -25,6 +25,11 @@ public class EventDbRepo extends DbRepoId<Long,Event> implements Repository<Long
         super(url, username, password);
     }
 
+    public EventDbRepo(String url, String username, String password,int size) {
+        super(url, username, password);
+        super.page=new Page(new Pageble(0,size), new ArrayList().stream());
+    }
+
     @Override
     public boolean save(Event entity) {
         if(entity.getId()==null) entity.setId(generateId());
@@ -75,21 +80,46 @@ public class EventDbRepo extends DbRepoId<Long,Event> implements Repository<Long
 
     @Override
     public Page<Event> getAll(Pageble pageble) {
+
         if(super.sql==null)super.sql="select * from ( select * ,ROW_NUMBER() over (order by id_ue ASC) as rowss from public.\"Events\" E inner join public.\"UserEvents\" UE on E.id=UE.id_e)as Foo where rowss>=? and rowss<? ";
-        return super.getAll(pageble);
+       return super.getAll(pageble);
         //return super.getAll();
     }
 
 
     public Page<Event> getPageEvents(PageType type) {
-        if(super.sql==null)super.sql="select * from ( select * ,ROW_NUMBER() over (order by id_ue ASC) as rowss from public.\"Events\" ) as Foo where rowss>=? and rowss<? ";
+
+        if(super.sql==null)super.sql="select * from ( select * ,ROW_NUMBER() over (order by id ASC) as rowss from public.\"Events\" ) as Foo where rowss>=? and rowss<? ";
+
         switch(type){
             case CURRENT -> {return super.getCurrentPage();}
             case NEXT -> {return super.getNextPage();}
             case PREVIOUS -> {return super.getPreviousPage();}
         };
         return null;
-        //return super.getAll();
+    }
+
+
+    public Page<Event> getPageEventsSUBSCRIBE(PageType type,Long id_u) {
+        if(super.sql==null)sql="select * from ( select * ,ROW_NUMBER() over (order by id ASC) as rowss from (select * from public.\"Events\" E inner join public.\"UserEvents\" UE on E.id=UE.id_e where  UE.id_u=\'"+id_u.toString()+"\')as Foo1 )as Foo where rowss>=? and rowss<? ";
+        switch(type){
+            case CURRENT -> {return super.getCurrentPage();}
+            case NEXT -> {return super.getNextPage();}
+            case PREVIOUS -> {return super.getPreviousPage();}
+        };
+        return null;
+    }
+
+
+
+    public Page<Event> getFirstPageEvents(PageType type) {
+        super.page=super.page=new Page(new Pageble(0,super.page.getCurrentPage().getPageSize()), new ArrayList().stream());
+        return getPageEvents(type);
+    }
+
+    public Page<Event> getFirstPageEventsSUBSCRIBE(PageType type,Long id) {
+        super.page=super.page=new Page(new Pageble(0,super.page.getCurrentPage().getPageSize()), new ArrayList().stream());
+        return getPageEventsSUBSCRIBE(type,id);
     }
 
     public List<Event> getUserEvents(Long id){
@@ -118,7 +148,7 @@ public class EventDbRepo extends DbRepoId<Long,Event> implements Repository<Long
 
     public Event getByNameEvent(String name)
     {
-        super.sql= "select * from public.\"Events\" where name=?";
+        if(super.sql==null)super.sql= "select * from public.\"Events\" where name=?";
         Event ev=super.getByOther(name);
         return ev;//==null ? super.getByOther(name) : ev;
 

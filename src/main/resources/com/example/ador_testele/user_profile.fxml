@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #8080ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.UserProfileController">
+   <children>
+      <TextField layoutY="146.0" prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: #bf80ff;" />
+      <ImageView fitHeight="126.0" fitWidth="115.0" layoutX="21.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pozaProiect.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="Nume" layoutX="151.0" layoutY="70.0" prefHeight="25.0" prefWidth="86.0" promptText="nume" style="-fx-background-color: #ccccff;" />
+      <TextField fx:id="prenume" layoutX="151.0" layoutY="109.0" prefHeight="25.0" prefWidth="86.0" promptText="prenume" style="-fx-background-color: #ccccff;" />
+      <TextField fx:id="Username" layoutX="20.0" layoutY="185.0" prefHeight="25.0" prefWidth="113.0" promptText="\@username" style="-fx-background-color: #ccccff;" />
+      <Text layoutX="194.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cluj-Napoca" wrappingWidth="75.47003173828125" />
+      <Text layoutX="194.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student" wrappingWidth="56.13671875" />
+      <Text layoutX="184.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 Iulie 2001" wrappingWidth="75.47003173828125" />
+      <ImageView fitHeight="25.0" fitWidth="33.0" layoutX="145.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Photos/adressIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="145.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Photos/WorkIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="145.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Photos/DateIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
