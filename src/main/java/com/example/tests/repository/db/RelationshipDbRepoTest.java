@@ -96,20 +96,6 @@ class RelationshipDbRepoTest {
     }
 
     @Test
-    void saveExistentId(){
-        RelationshipDbRepo repo = new RelationshipDbRepo(Connections.URL, Connections.Username, Connections.Password);
-        try{
-            assertTrue(repo.save(new Relationship(1L,"acadeaua","weew", LocalDate.of(
-                    2020,12,12
-            ))));
-        }catch(EntityRepoException e){
-            assertTrue(true);
-        }
-        assertTrue(repo.getSize()==3);
-        repo.closeConnection();
-    }
-
-    @Test
     void saveExistentUsernames(){
         RelationshipDbRepo repo = new RelationshipDbRepo(Connections.URL, Connections.Username, Connections.Password);
         try{

@@ -162,6 +162,7 @@ public abstract class DbRepoId<Id,E extends Entity<Id>>implements Repository<Id,
         try{
             if(connection.isClosed()) openConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
+            System.out.println(sql);
             ResultSet resultSet = ps.executeQuery();
             size=getSizeStatement(resultSet);
             sql=null;

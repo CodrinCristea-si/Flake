@@ -107,6 +107,15 @@ public class ProfileController implements Observer {
                 textData.setEditable(false);
                 return;
             }
+            {
+                butR.setVisible(true);
+                butR.setText("Request");
+                butL.setVisible(false);
+                labelFr.setVisible(false);
+                textData.setVisible(false);
+                textData.setEditable(false);
+                return;
+            }
         }
     }
 
