@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.SearchGUIController">
+   <children>
+      <TableView fx:id="tableU" onMouseClicked="#handleProfile" prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #ccccff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tableColumnFName" prefWidth="183.199951171875" text="FirstName" />
+          <TableColumn fx:id="tableColumnLName" prefWidth="189.5999755859375" text="LastName" />
+            <TableColumn fx:id="tableColumnUsername" prefWidth="227.2000732421875" text="Username" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorReg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="434.0" style="-fx-background-color: #8080ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.RegisterController">
+   <children>
+      <GridPane layoutX="27.0" layoutY="71.0" prefHeight="174.0" prefWidth="372.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.2" minWidth="10.0" prefWidth="170.40001220703124" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.20002441406254" minWidth="10.0" prefWidth="200.79998779296875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="30.0" prefWidth="115.0" text="First Name:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Last Name:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Username:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFirstName" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" />
+            <TextField fx:id="textLastName" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textUsername" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Password:" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Retype password:" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="textPassword" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="textRetypePassword" style="-fx-background-color: #ccccff;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <HBox layoutX="6.0" layoutY="273.0" prefHeight="100.0" prefWidth="414.0">
+         <children>
+            <AnchorPane prefHeight="100.0" prefWidth="432.0">
+               <children>
+
+                  <Button layoutX="264.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #b380ff;" text="Register">
+
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+
+                  <Button layoutX="11.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: #b380ff;" text="Cancel">
+
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Label layoutX="141.0" layoutY="27.0" text="REGISTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

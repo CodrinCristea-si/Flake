@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="TableView" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1">
+
+  <columns>
+
+    <TableColumn fx:id="tableColumnFirstName" prefWidth="75.0"/>
+    <TableColumn fx:id="tableColumnLastName" prefWidth="75.5"/>
+  </columns>
+</TableView>

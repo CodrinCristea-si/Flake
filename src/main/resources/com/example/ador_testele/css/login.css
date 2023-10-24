@@ -1,0 +1,32 @@
+.split-pane-left{
+    -fx-background-color: linear-gradient(to bottom,#b3e0ff,#b3e0ff);
+    -fx-border-color: rgb(25,26,158);
+}
+
+.split-pane-right{
+    -fx-background-color: linear-gradient(to bottom,#b3e0ff,#b3e0ff);
+    -fx-border-color: rgb(25,26,158);
+}
+
+.button-login{
+    -fx-background-color: #ffe6e6;
+}
+
+.button-reg{
+    -fx-background-color: #C9310F;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: linear-gradient(to bottom,#8c1aff, #8c1aff);
+}
+
+.text-field {
+    /*-fx-background-color: -fx-text-box-border, -fx-background ;*/
+    -fx-background-insets: 0, 0 0 1 0 ;
+    /*-fx-background-radius: 0 ;*/
+    -fx-background-color: #ffe6e6;
+}
+.button{
+    -fx-size: 20px;
+    -fx-base: rgb(191, 57, 229);
+}

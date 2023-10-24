@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.TableEvents">
+   <children>
+      <TextField fx:id="unu" layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="68.0"   />
+      <TextField fx:id="doi" layoutX="110.0" layoutY="24.0"   />
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+.date-format{
+    -fx-pref-width: 50%;
+}
+
+.mess-format{
+
+}
+
+.username-logged-format{
+
+}
+
+.username-other-format{
+
+}
+
+.text-area {
+    text-area-background: blue ;
+}
+
+.text-area .content {
+    -fx-background-color: text-area-background ;
+}

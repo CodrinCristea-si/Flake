@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.MainWindowController">
+   <SplitPane fx:id="splitMain" dividerPositions="0.20218120805369125" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../ador_testele/css/friends_requests.css"  xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+      <items>
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #8080ff;" stylesheets="@../ador_testele/css/friends_requests.css" >
+            <children>
+
+               <Button layoutX="52.0" layoutY="26.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #ccccff;" text="Search" onAction="#handleSearch">
+                  <font>
+                     <Font size="15.0" />
+                  </font></Button>
+
+               <ImageView fitHeight="33.0" fitWidth="25.0" layoutX="27.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@Photos/SearchIcon.png" />
+                  </image>
+               </ImageView>
+
+
+
+               <TextField fx:id="textSearch" layoutX="138.0" layoutY="26.0" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #e6e6ff;" />
+               <Button fx:id="HomeButton" layoutX="315.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleHome" prefHeight="33.0" prefWidth="41.0" style="-fx-background-color: #8080ff;">
+
+
+
+                  <graphic>
+                     <ImageView fitHeight="33.0" fitWidth="25.0" layoutX="27.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Photos/HomeIcon.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+
+               <Button fx:id="MessagesButton" layoutX="362.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleMessage" prefHeight="33.0" prefWidth="41.0" style="-fx-background-color: #8080ff;">
+                  <graphic>
+                     <ImageView fitHeight="33.0" fitWidth="25.0" layoutX="27.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Photos/MessagesIcon2.png" />
+
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+
+               <Button fx:id="PeopleButton" layoutX="409.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleFriends" prefHeight="33.0" prefWidth="41.0" style="-fx-background-color: #8080ff;">
+                  <graphic>
+                     <ImageView fitHeight="33.0" fitWidth="25.0" layoutX="27.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Photos/People2.png" />
+
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+
+               <Button fx:id="EventsButton" layoutX="456.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleEvents" prefHeight="33.0" prefWidth="41.0" style="-fx-background-color: #8080ff;">
+
+                  <graphic>
+                     <ImageView fitHeight="33.0" fitWidth="25.0" layoutX="27.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Photos/EventIcon.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+
+
+               <Button fx:id="StatisticsButton" layoutX="503.0" layoutY="24.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="41.0" style="-fx-background-color: #8080ff;" onAction="#handleStatistics">
+
+
+                  <graphic>
+                     <ImageView fitHeight="33.0" fitWidth="25.0" layoutX="27.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Photos/StatisticsIcon.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+
+               <Button fx:id="ExitButton" layoutX="550.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="33.0" prefWidth="41.0" style="-fx-background-color: #8080ff;">
+
+                  <graphic>
+                     <ImageView fitHeight="33.0" fitWidth="25.0" layoutX="27.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@Photos/ExitIcon.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children></AnchorPane>
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+      </items>
+   </SplitPane>
+</AnchorPane>

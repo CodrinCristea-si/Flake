@@ -1,0 +1,3 @@
+C:\Users\codri\IdeaProjects\ProjectReteaDeSocializare\build\resources\main\com\example\ador_testele\search-view.fxml
+C:\Users\codri\IdeaProjects\ProjectReteaDeSocializare\out\production\resources\com\example\ador_testele\search-view.fxml
+C:\Users\codri\IdeaProjects\ProjectReteaDeSocializare\src\main\resources\com\example\ador_testele\search-view.fxml

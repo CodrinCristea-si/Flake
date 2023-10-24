@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GUIController.ProfileController">
+   <children>
+           <ImageView fitHeight="88.0" fitWidth="101.0" layoutX="20.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pozaProiect.jpg" />
+         </image></ImageView>
+      <TextArea layoutX="23.0" layoutY="155.0" prefHeight="56.0" prefWidth="234.0" />
+      <TextField layoutX="20.0" layoutY="230.0" prefHeight="25.0" prefWidth="88.0" promptText="post" />
+      <TextField layoutX="113.0" layoutY="230.0" prefHeight="25.0" prefWidth="88.0" promptText="friends" />
+      <TextField layoutX="212.0" layoutY="230.0" prefHeight="25.0" prefWidth="95.0" promptText="events" />
+      <Button fx:id="add" layoutX="117.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleAddFriend" prefHeight="25.0" prefWidth="79.0" />
+      <Button layoutX="221.0" layoutY="68.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="message" />
+      <TextField fx:id="a" layoutX="164.0" layoutY="27.0" prefHeight="25.0" prefWidth="95.0" text="aaa" />
+      <TextField fx:id="b" layoutX="24.0" layoutY="119.0" prefHeight="25.0" prefWidth="95.0" />
+      <TextField fx:id="c" layoutX="127.0" layoutY="119.0" prefHeight="25.0" prefWidth="88.0" />
+
+
+   </children>
+</AnchorPane>
